@@ -5,9 +5,9 @@ php:
   - 5.5
   - 5.6
 before_script:
-  - composer install --dev
+  - composer install --dev --no-interaction
   - wget http://www.phing.info/get/phing-latest.phar
   - mv phing-latest.phar phing.phar
 
 script:
-  - phing -Ddb.pass='' test
+  - phing.phar -Ddb.pass='' test
